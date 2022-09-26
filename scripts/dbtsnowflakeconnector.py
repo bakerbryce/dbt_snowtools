@@ -66,7 +66,7 @@ def create_connection(target_properties):
     # Instantiate new config object for easy access to attributes
     sc = snowflake_config()
 
-
+    # Create a new Snowflake connection
     con = snowflake.connector.connect(
         authenticator=sc.authenticator,
         account=sc.account,
