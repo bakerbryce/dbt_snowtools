@@ -77,3 +77,17 @@ def create_connection(target_properties):
     )
 
     return con
+    
+    
+    
+def get_query_results_as_list(connection, sql: str):
+    """
+    Accepts SnowflakeConnection object and sql statement
+    """
+    # Run the statement with connection management
+    with connection:
+        cur = connection.cursor(DictCursor)
+        cur.execute(sql)
+
+    # Get rows as a list of dictionaries
+    return cur.fetchall()
