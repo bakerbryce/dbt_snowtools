@@ -8,8 +8,8 @@ import time
 
 # Declare initial vars
 source_root_path = os.path.join("models","sources")
-model_root_path = os.path.join("models","bronze")
-model_root_prefix = "bronze"
+model_root_path = os.path.join("models","streams")
+model_root_prefix = "str"
 model_file_list = []
 
 
