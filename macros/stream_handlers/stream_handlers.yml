@@ -1,0 +1,29 @@
+version: 2
+
+macros:
+  - name: stream_is_stale
+    description: Checks if the underlying table for a stream was dropped and if true, recreates the stream. Returns boolean.
+    arguments:
+      - name: source_relation
+        type: relation
+        description: The supporting source relation for the stream
+      - name: stream_relation
+        type: relation
+        description: The stream relation
+
+  - name: rebuild_stream
+    description: Drops and recreates a stream
+    arguments:
+      - name: source_relation
+        type: relation
+        description: The supporting source relation for the stream
+      - name: stream_relation
+        type: relation
+        description: The stream relation
+
+  - name: stream_has_data
+    decription: Checks if Snowflake stream has data. Returns boolean.
+    arguments:
+      - name: relation
+        type: relation
+        description: The Snowflake stream to check for data.
