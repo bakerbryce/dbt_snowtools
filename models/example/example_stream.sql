@@ -1,5 +1,4 @@
-{# Auto-generated Bronze stream #}
-
+{# Auto-generated stream #}
 {# Model configuration #}
 {{ config(materialized='stream',
           stream_source_name='source_name',
