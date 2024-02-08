@@ -1,0 +1,16 @@
+version: 2
+
+materializations:
+  - name: procedure
+    description: >
+      Allows creation of Snowflake stored procedures in a similar manner to other models. This materialization will drop all procedures of the same name regardless of parameters and recreate the object.
+      This overrides Snowflake's default support for [UDF name overloading](https://docs.snowflake.com/en/sql-reference/udf-overview.html#overloading-of-udf-names).
+  
+  - name: function
+    description: >
+      Allows creation of Snowflake user defined functions in a similar manner to other models. This materialization will drop all functions of the same name regardless of parameters and recreate the object.
+      This overrides Snowflake's default support for [UDF name overloading](https://docs.snowflake.com/en/sql-reference/udf-overview.html#overloading-of-udf-names).
+
+  - name: stream
+    description: >
+      Allows creation of Snowflake Streams in a similar manner to other models.
